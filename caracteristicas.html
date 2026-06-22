@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Características</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:white;
+
+font-family:'Patrick Hand', cursive;
+
+color:#111;
+
+}
+
+/* NAV */
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 60px;
+
+background:black;
+
+border-bottom:6px dashed white;
+
+}
+
+.logo{
+
+font-family:'Bangers', cursive;
+
+font-size:2rem;
+
+color:white;
+
+letter-spacing:2px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.2s;
+
+}
+
+nav a:hover{
+
+background:white;
+
+color:black;
+
+padding:4px 10px;
+
+transform:rotate(-3deg);
+
+display:inline-block;
+
+}
+
+/* HEADER */
+
+.header{
+
+padding:70px 10% 30px;
+
+text-align:center;
+
+}
+
+.header h1{
+
+font-family:'Bangers', cursive;
+
+font-size:5rem;
+
+letter-spacing:2px;
+
+}
+
+.header p{
+
+font-size:1.5rem;
+
+}
+
+/* FICHA */
+
+.perfil{
+    
+
+padding:20px 10% 80px;
+
+}
+
+.perfil-card{
+
+
+border:5px solid black;
+
+padding:30px;
+
+display:grid;
+
+grid-template-columns:300px 1fr;
+
+gap:35px;
+
+box-shadow:10px 10px 0 black;
+
+}
+
+.perfil-foto{
+
+height:380px;
+
+border:5px solid black;
+
+overflow:hidden;
+
+}
+
+.perfil-foto img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:grayscale(100%);
+
+}
+
+.perfil-info h2{
+
+font-family:'Bangers', cursive;
+
+font-size:3.5rem;
+
+margin-bottom:10px;
+
+}
+
+.sub{
+
+font-size:1.4rem;
+
+margin-bottom:20px;
+
+}
+
+.tags{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-bottom:30px;
+
+}
+
+.tags span{
+
+border:3px solid black;
+
+padding:10px 16px;
+
+transform:rotate(-2deg);
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+.stat{
+
+border:3px solid black;
+
+padding:20px;
+
+}
+
+.stat h3{
+
+font-family:'Bangers';
+
+margin-bottom:10px;
+
+font-size:2rem;
+
+}
+
+/* TABLA */
+
+.tabla{
+
+padding:0 10% 80px;
+
+}
+
+.tabla h2{
+
+font-family:'Bangers';
+
+font-size:3rem;
+
+margin-bottom:25px;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+th,td{
+
+border:3px solid black;
+
+padding:18px;
+
+font-size:1.2rem;
+
+}
+
+th{
+
+background:black;
+
+color:white;
+
+font-family:'Bangers';
+
+letter-spacing:1px;
+
+}
+
+tr:hover{
+
+background:#f4f4f4;
+
+}
+
+/* EXTRAS */
+
+.extras{
+
+padding:0 10% 80px;
+
+}
+
+.extras h2{
+
+font-family:'Bangers';
+
+font-size:3rem;
+
+margin-bottom:30px;
+
+}
+
+.extra-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:20px;
+
+}
+
+.extra{
+
+border:4px solid black;
+
+padding:25px;
+
+font-size:1.3rem;
+
+transform:rotate(-2deg);
+
+box-shadow:6px 6px 0 black;
+
+}
+
+.extra:nth-child(even){
+
+transform:rotate(2deg);
+
+}
+
+/* FOOTER */
+
+footer{
+
+border-top:4px solid black;
+
+padding:30px;
+
+text-align:center;
+
+font-family:'Bangers';
+
+font-size:1.3rem;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.perfil-card{
+
+grid-template-columns:1fr;
+
+}
+
+.header h1{
+
+font-size:3rem;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+RayenReyes
+</div>
+
+<ul>
+
+<li><a href="index.html">Biografía</a></li>
+
+<li><a href="caracteristicas.html">Características</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+
+<div class="header">
+
+<h1>Mis características</h1>
+
+<p>hoja de personaje</p>
+
+</div>
+
+
+<section class="perfil">
+
+<div class="perfil-card">
+
+<div class="perfil-foto">
+
+<img src="https://i.pinimg.com/736x/2b/fe/77/2bfe7796abb24eb70ffa2a88169bbbd8.jpg">
+
+</div>
+
+
+<div class="perfil-info">
+
+<h2>Tamara</h2>
+
+<p class="sub">
+
+Estudiante por obligación, jugadora de LoL por gusto.
+
+</p>
+
+<div class="tags">
+
+<span>19 AÑOS</span>
+
+<span>COMPUTACIÓN</span>
+
+<span>DISEÑO</span>
+
+<span>VIDEOJUEGOS</span>
+
+<span>MÚSICA</span>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<h3>buffs ⬆️</h3>
+
++ curiosidad<br>
+
++ buen nivel de inglés<br>
+
++ rapidez de aprendizaje
+
+</div>
+
+<div class="stat">
+
+<h3>debuffs ⬇️</h3>
+
+− dormir tarde<br>
+
+− dependencia a la cocacola<br>
+
+− intolerante a la lactosa
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="tabla">
+
+<h2>Características detalladas</h2>
+
+<table>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripción</th>
+
+<th>Nivel</th>
+
+</tr>
+
+<tr>
+
+<td>Creatividad</td>
+
+<td>Siempre inventando e intentando llevar a cabo mis ideas.</td>
+
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Adaptabilidad</td>
+
+<td>Me acostumbro rápido a nuevos entornos.</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Responsabilidad</td>
+
+<td>Cumplo mis objetivos dentro del plazo establecido.</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Curiosidad</td>
+
+<td>Me gusta aprender cosas nuevas.</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Paciencia</td>
+
+<td>Depende del día.</td>
+
+<td>★★☆☆☆</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<section class="extras">
+
+<h2>extras</h2>
+
+<div class="extra-grid">
+
+<div class="extra">
+
+Actualmente:
+
+<br><br>
+
+Pensando en la inmortalidad del cangrejo
+
+</div>
+
+<div class="extra">
+
+Último interés descubierto:
+
+<br><br>
+
+Practicar la trompeta y el skate
+
+</div>
+
+<div class="extra">
+
+Habilidad especial:
+
+<br><br>
+
+Encontrar ideas en todos lados
+
+</div>
+
+<div class="extra">
+
+Nivel de energía:
+
+<br><br>
+
+★★☆☆☆
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+Tamara Reyes © 2026
+
+</footer>
+
+</body>
+
+</html>

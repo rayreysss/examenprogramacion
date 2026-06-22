@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Biografía</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:white;
+font-family:'Patrick Hand', cursive;
+color:#111;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+
+background:black;
+color:white;
+
+border-bottom:6px dashed white;
+
+font-size:1.2rem;
+}
+
+.logo{
+font-family:'Bangers', cursive;
+font-size:2rem;
+letter-spacing:2px;
+color:white;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.2s;
+}
+
+nav a:hover{
+transform:rotate(-3deg);
+display:inline-block;
+background:white;
+color:black;
+padding:4px 10px;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 10%;
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.title{
+font-family:'Bangers', cursive;
+font-size:5rem;
+line-height:1;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+.subtitle{
+font-size:1.6rem;
+max-width:700px;
+line-height:1.4;
+}
+
+/* IMAGEN */
+
+.sketch{
+height:550px;
+border:5px solid black;
+position:relative;
+overflow:hidden;
+background:white;
+}
+
+.foto{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:grayscale(100%) contrast(130%) brightness(1.05);
+mix-blend-mode:multiply;
+display:block;
+}
+
+.sticky{
+position:absolute;
+padding:12px;
+border:3px solid black;
+background:white;
+z-index:10;
+font-family:'Bangers', cursive;
+letter-spacing:1px;
+}
+
+.s1{
+top:20px;
+right:20px;
+transform:rotate(8deg);
+}
+
+.s2{
+bottom:30px;
+left:20px;
+transform:rotate(-6deg);
+}
+
+/* HISTORIA (CÓMIC STYLE) */
+
+.historia{
+margin-top:-20px;
+padding:40px 10% 80px;
+border-top:4px dashed black;
+}
+
+.historia h2{
+font-family:'Bangers', cursive;
+font-size:3rem;
+letter-spacing:1px;
+margin-bottom:40px;
+}
+
+.comic{
+display:grid;
+gap:30px;
+}
+
+.panel{
+border:4px solid black;
+padding:20px;
+background:white;
+position:relative;
+box-shadow:5px 5px 0px black;
+transform:rotate(-0.5deg);
+}
+
+.panel:nth-child(2){
+transform:rotate(0.8deg);
+}
+
+.panel:nth-child(3){
+transform:rotate(-0.6deg);
+}
+
+.panel .año{
+font-family:'Bangers', cursive;
+font-size:1.6rem;
+margin-bottom:10px;
+}
+
+.panel .texto{
+font-size:1.15rem;
+line-height:1.6;
+color:#222;
+}
+
+/* FOOTER */
+
+footer{
+border-top:4px solid black;
+padding:30px;
+text-align:center;
+font-family:'Bangers', cursive;
+letter-spacing:1px;
+}
+
+@media(max-width:900px){
+
+nav{
+padding:20px;
+flex-direction:column;
+gap:20px;
+}
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.title{
+font-size:3rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+RayenReyes
+</div>
+
+<ul>
+<li><a href="index.html">Biografía</a></li>
+<li><a href="caracteristicas.html">Características</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1 class="title">
+
+Hola<br>
+Soy Tamara
+
+</h1>
+
+<p class="subtitle">
+
+Soy estudiante de computación e informática en la FACH.
+Me gusta crear, dibujar y obsesionarme con detalles raros.
+
+</p>
+
+</div>
+
+<div class="sketch">
+
+<img src="https://i.pinimg.com/736x/2b/fe/77/2bfe7796abb24eb70ffa2a88169bbbd8.jpg" class="foto">
+
+<div class="sticky s1">
+19 AÑOS
+</div>
+
+<div class="sticky s2">
+Tamara Rayen Reyes Tavilo
+</div>
+
+</div>
+
+</section>
+
+<section class="historia">
+
+<h2>Mi historia (versión resumida)</h2>
+
+<div class="comic">
+
+<div class="panel">
+
+<div class="año">
+2007 →
+</div>
+
+<div class="texto">
+
+Nací en Iquique, Región de Tarapacá. Pasé toda mi vida e infancia donde el desierto y el mar se juntan. Los primeros años de mi vida los recuerdo con mucha claridad, aunque no sé si realmente los recuerdo o porque me los han contado tantas veces que terminaron formando parte de mi memoria. De niña era bastante tranquila, mis papás trabajaban asi que pasaba mucho tiempo sola, jugaba, dibujaba, miraba tele, me inventaba historias y amigos.
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<div class="año">
+Adolescencia →
+</div>
+
+<div class="texto">
+
+Con el tiempo y a medida de que fui creciendo empecé a ser un poco más inquieta pero siempre me he mantenido en el margen de lo tranquilo e introvertido, pasé toda mi adolescencia jugando videojuegos, tocando instrumentos, viendo anime y obsesionándome con cosas raras o fuera de lo común. Finalmente la pandemia sólo impulsó aún más mi estilo de vida, dando espacio a que pasara más tiempo en mi burbuja.
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<div class="año">
+Actualidad →
+</div>
+
+<div class="texto">
+
+Hoy tengo 19 años y estoy estudiando Computación e informática en la FACH, me fui lejos, lo cual significó un desafío sobre todo el primer año, siempre estuve acostumbrada a la "cercanía" de mi familia, la ciudad pequeña, el mar, por lo que llegar a una ciudad como santiago fue un cambio significativo, aún así me he permitido conocer lugares nuevos, salir, conocer gente y disfrutar de la escuela. A pesar de que dentro de la escuela cumplo el rol de "persona que sirve a la patria", en mi vida personal sigo siendo yo misma, practico mis hobbys y sigo descubriendo cosas nuevas a las que dedicarle mi tiempo.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Tamara Reyes© 2026
+
+</footer>
+
+</body>
+</html>
+

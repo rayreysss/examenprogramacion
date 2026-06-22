@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:white;
+font-family:'Patrick Hand', cursive;
+color:#111;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+background:black;
+color:white;
+border-bottom:6px dashed white;
+font-size:1.2rem;
+}
+
+.logo{
+font-family:'Bangers', cursive;
+font-size:2rem;
+letter-spacing:2px;
+color:white;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.2s;
+}
+
+nav a:hover{
+transform:rotate(-3deg);
+display:inline-block;
+background:white;
+color:black;
+padding:4px 10px;
+}
+
+/* HEADER */
+
+.header{
+padding:70px 10% 40px;
+text-align:center;
+}
+
+.title{
+font-family:'Bangers', cursive;
+font-size:5rem;
+letter-spacing:2px;
+}
+
+.subtitle{
+font-size:1.4rem;
+margin-top:10px;
+}
+
+/* LAYOUT */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1.3fr;
+gap:40px;
+padding:40px 10% 80px;
+}
+
+/* INFO */
+
+.info{
+border:4px solid black;
+padding:25px;
+box-shadow:5px 5px 0 black;
+}
+
+.info h2{
+font-family:'Bangers', cursive;
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+.info-item{
+margin-top:15px;
+border:3px solid black;
+padding:10px;
+background:white;
+}
+
+/* FORM */
+
+.form{
+border:4px solid black;
+padding:25px;
+box-shadow:5px 5px 0 black;
+}
+
+label{
+font-family:'Bangers', cursive;
+font-size:1.2rem;
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+border:3px solid black;
+font-family:'Patrick Hand', cursive;
+font-size:1rem;
+}
+
+textarea{
+min-height:120px;
+}
+
+/* BOTÓN */
+
+button{
+margin-top:20px;
+width:100%;
+padding:12px;
+background:black;
+color:white;
+border:none;
+font-family:'Bangers', cursive;
+font-size:1.3rem;
+cursor:pointer;
+transition:.2s;
+}
+
+button:hover{
+background:#333;
+}
+
+/* ALERTA */
+
+#alerta{
+display:none;
+padding:10px;
+margin-bottom:15px;
+border:3px solid black;
+}
+
+/* FOOTER */
+
+footer{
+border-top:4px solid black;
+padding:30px;
+text-align:center;
+font-family:'Bangers', cursive;
+letter-spacing:1px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.contact{
+grid-template-columns:1fr;
+}
+
+.title{
+font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">RayenReyes</div>
+
+<ul>
+<li><a href="index.html">Biografía</a></li>
+<li><a href="caracteristicas.html">Características</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+
+<div class="header">
+<h1 class="title">Para más información</h1>
+<p class="subtitle">¡Envíame un mensaje!</p>
+</div>
+
+<section class="contact">
+
+<!-- INFO -->
+<div class="info">
+
+<h2>Contacto</h2>
+
+<div class="info-item">✉ tamara.reyes7328@gmail.com</div>
+<div class="info-item">📱 +56 9 7328 5446</div>
+<div class="info-item">📍 El bosque, Santiago, Chile</div>
+
+</div>
+
+<!-- FORM -->
+<div class="form">
+
+<div id="alerta"></div>
+
+<label>Nombre *</label>
+<input id="nombre" type="text">
+
+<label>Apellido *</label>
+<input id="apellido" type="text">
+
+<label>Correo *</label>
+<input id="correo" type="text">
+
+<label>Teléfono *</label>
+<input id="telefono" type="text" maxlength="9">
+
+<label>Mensaje *</label>
+<textarea id="mensaje"></textarea>
+
+<button onclick="validarFormulario()">
+ENVIAR MENSAJE
+</button>
+
+</div>
+
+</section>
+
+<footer>
+Tamara Reyes © 2026
+</footer>
+
+<script>
+
+function mostrarAlerta(msg){
+const a = document.getElementById("alerta");
+a.style.display = "block";
+a.innerHTML = msg;
+}
+
+function validarCorreo(correo){
+return correo.includes("@") && correo.includes(".") && correo.indexOf(".") > correo.indexOf("@");
+}
+
+function validarFormulario(){
+
+const nombre = document.getElementById("nombre").value.trim();
+const apellido = document.getElementById("apellido").value.trim();
+const correo = document.getElementById("correo").value.trim();
+const telefono = document.getElementById("telefono").value.trim();
+const mensaje = document.getElementById("mensaje").value.trim();
+
+if(nombre === ""){
+mostrarAlerta("❌ El nombre no puede estar vacío");
+return;
+}
+
+if(apellido === ""){
+mostrarAlerta("❌ El apellido no puede estar vacío");
+return;
+}
+
+/* CORREO MEJORADO */
+if(!validarCorreo(correo)){
+mostrarAlerta("❌ Ingresa un correo válido (debe tener @ y dominio como .com o .cl)");
+return;
+}
+
+if(telefono.length !== 9 || isNaN(telefono)){
+mostrarAlerta("❌ El teléfono debe tener 9 dígitos numéricos");
+return;
+}
+
+if(mensaje.length < 10){
+mostrarAlerta("❌ El mensaje debe tener al menos 10 caracteres");
+return;
+}
+
+mostrarAlerta("✅ Mensaje enviado correctamente");
+
+}
+
+</script>
+
+</body>
+</html>
